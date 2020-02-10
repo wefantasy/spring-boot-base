@@ -1,8 +1,10 @@
 package com.ctgu.qmx.springbootbase.mapper;
 
-import com.ctgu.qmx.springbootbase.entity.User;
+import java.util.List;
+
 import com.ctgu.qmx.springbootbase.mapper.base.CommonMapper;
+import com.ctgu.qmx.springbootbase.entity.Permission;
 import org.springframework.stereotype.Component;
 
-public interface UserMapper extends CommonMapper<User>{
+public interface PermissionMapper extends CommonMapper<Permission>{
 }

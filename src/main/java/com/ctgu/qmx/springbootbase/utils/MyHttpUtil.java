@@ -17,7 +17,7 @@ import java.io.*;
  *
  * @version V1.0
  */
-public class HttpUtil {
+public class MyHttpUtil {
 
 	/**
 	 * 获取用户真实IP地址（忽略代理软件IP）

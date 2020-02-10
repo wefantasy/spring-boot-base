@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ctgu.qmx.springbootbase.mapper.AdminPermissionMapper">
+
+	<select id="doSelectBySome" parameterType="com.ctgu.qmx.springbootbase.entity.AdminPermission" resultType="com.ctgu.qmx.springbootbase.entity.AdminPermission">
+		SELECT * FROM admin_permission
+		<where>
+				<if test="id != null">
+					and id = #{id}
+				</if>
+				<if test="adminId != null">
+					and admin_id = #{adminId}
+				</if>
+				<if test="permissionId != null">
+					and permission_id = #{permissionId}
+				</if>
+		</where>
+	</select>
+
+</mapper>

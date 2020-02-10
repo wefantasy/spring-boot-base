@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ctgu.qmx.springbootbase.mapper.UserMapper">
-    <select id="mySelectUserById" resultType="User" parameterType="User">
-        select * from user where id = #{id}
-    </select>
+
+	<select id="doSelectBySome" parameterType="com.ctgu.qmx.springbootbase.entity.User" resultType="com.ctgu.qmx.springbootbase.entity.User">
+		SELECT * FROM user
+		<where>
+				<if test="id != null">
+					and id = #{id}
+				</if>
+				<if test="username != null">
+					and username = #{username}
+				</if>
+				<if test="password != null">
+					and password = #{password}
+				</if>
+				<if test="nickName != null">
+					and nick_name = #{nickName}
+				</if>
+				<if test="name != null">
+					and name = #{name}
+				</if>
+				<if test="sex != null">
+					and sex = #{sex}
+				</if>
+				<if test="age != null">
+					and age = #{age}
+				</if>
+				<if test="school != null">
+					and school = #{school}
+				</if>
+				<if test="studentid != null">
+					and studentid = #{studentid}
+				</if>
+				<if test="summary != null">
+					and summary = #{summary}
+				</if>
+				<if test="datetime != null">
+					and datetime = #{datetime}
+				</if>
+				<if test="status != null">
+					and status = #{status}
+				</if>
+		</where>
+	</select>
+
 </mapper>
