@@ -23,7 +23,7 @@
 		<hutool.version>4.5.7</hutool.version>
 		<mybatis-plus-core.version>3.2.0</mybatis-plus-core.version>
 		<mybatis-plus-boot-starter.version>3.2.0</mybatis-plus-boot-starter.version>
-		<mysql-connector.version>8.0.15</mysql-connector.version>
+		<mysql-connector.version>8.0.28</mysql-connector.version>
 		<druid-spring-boot-starter.version>1.1.20</druid-spring-boot-starter.version>
 	</properties>
 
